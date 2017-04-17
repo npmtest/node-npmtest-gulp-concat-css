@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-gulp-concat-css/gulp-concat-css/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-gulp-concat-css/node_modules/gulp-concat-css/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-concat-css">npmtest-gulp-concat-css (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-concat-css/gulp-concat-css/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-concat-css/node_modules/gulp-concat-css/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">19.72% <small>(14 / 71)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-concat-css/gulp-concat-css/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-concat-css/node_modules/gulp-concat-css/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -494,86 +492,86 @@ var parseImport = require('parse-import');
 var reworkUrl = require('rework-plugin-url');
 var defaults = require('lodash.defaults');
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function(destFile, options) {</span>
-<span class="cstat-no" title="statement not covered" >  var buffer = [];</span>
-<span class="cstat-no" title="statement not covered" >  var firstFile, commonBase;</span>
-<span class="cstat-no" title="statement not covered" >  var destDir = path.dirname(destFile);</span>
-<span class="cstat-no" title="statement not covered" >  var urlImportRules = [];</span>
-<span class="cstat-no" title="statement not covered" >  options = defaults({}, options, {</span>
+module.exports = <span class="fstat-no" title="function not covered">function(destFile, options) {</span>
+<span class="cstat-no" title="statement not covered">  var buffer = [];</span>
+<span class="cstat-no" title="statement not covered">  var firstFile, commonBase;</span>
+<span class="cstat-no" title="statement not covered">  var destDir = path.dirname(destFile);</span>
+<span class="cstat-no" title="statement not covered">  var urlImportRules = [];</span>
+<span class="cstat-no" title="statement not covered">  options = defaults({}, options, {</span>
     inlineImports: true,
     rebaseUrls: true,
     includePaths: []
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return through.obj(<span class="fstat-no" title="function not covered" >function(file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered" >    var processedCss;</span>
+<span class="cstat-no" title="statement not covered">  return through.obj(<span class="fstat-no" title="function not covered">function(file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered">    var processedCss;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered" >      this.emit('error', new gutil.PluginError('gulp-concat-css', 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">    if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered">      this.emit('error', new gutil.PluginError('gulp-concat-css', 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if(!firstFile) {</span>
-<span class="cstat-no" title="statement not covered" >      firstFile = file;</span>
-<span class="cstat-no" title="statement not covered" >      commonBase = file.base;</span>
+<span class="cstat-no" title="statement not covered">    if(!firstFile) {</span>
+<span class="cstat-no" title="statement not covered">      firstFile = file;</span>
+<span class="cstat-no" title="statement not covered">      commonBase = file.base;</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function urlPlugin(file) {</span>
-<span class="cstat-no" title="statement not covered" >      return reworkUrl(<span class="fstat-no" title="function not covered" >function(url) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if(isUrl(url) || isDataURI(url) || path.extname(url) === '.css' || path.resolve(url) === url) {</span>
-<span class="cstat-no" title="statement not covered" >          return url;</span>
+<span class="fstat-no" title="function not covered">    function urlPlugin(file) {</span>
+<span class="cstat-no" title="statement not covered">      return reworkUrl(<span class="fstat-no" title="function not covered">function(url) {</span></span>
+<span class="cstat-no" title="statement not covered">        if(isUrl(url) || isDataURI(url) || path.extname(url) === '.css' || path.resolve(url) === url) {</span>
+<span class="cstat-no" title="statement not covered">          return url;</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var resourceAbsUrl = path.relative(commonBase, path.resolve(path.dirname(file), url));</span>
-<span class="cstat-no" title="statement not covered" >        resourceAbsUrl = path.relative(destDir, resourceAbsUrl);</span>
+<span class="cstat-no" title="statement not covered">        var resourceAbsUrl = path.relative(commonBase, path.resolve(path.dirname(file), url));</span>
+<span class="cstat-no" title="statement not covered">        resourceAbsUrl = path.relative(destDir, resourceAbsUrl);</span>
         //not all systems use forward slash as path separator
         //this is required by urls.
-<span class="cstat-no" title="statement not covered" >        if(path.sep === '\\'){</span>
+<span class="cstat-no" title="statement not covered">        if(path.sep === '\\'){</span>
           //replace with forward slash
-<span class="cstat-no" title="statement not covered" >          resourceAbsUrl = resourceAbsUrl.replace(/\\/g, '/');</span>
+<span class="cstat-no" title="statement not covered">          resourceAbsUrl = resourceAbsUrl.replace(/\\/g, '/');</span>
         }
-<span class="cstat-no" title="statement not covered" >        return resourceAbsUrl;</span>
+<span class="cstat-no" title="statement not covered">        return resourceAbsUrl;</span>
       });
     }
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function collectImportUrls(styles) {</span>
-<span class="cstat-no" title="statement not covered" >      var outRules = [];</span>
-<span class="cstat-no" title="statement not covered" >      styles.rules.forEach(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered" >        if(rule.type !== 'import') {</span>
-<span class="cstat-no" title="statement not covered" >          return outRules.push(rule);</span>
+<span class="fstat-no" title="function not covered">    function collectImportUrls(styles) {</span>
+<span class="cstat-no" title="statement not covered">      var outRules = [];</span>
+<span class="cstat-no" title="statement not covered">      styles.rules.forEach(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered">        if(rule.type !== 'import') {</span>
+<span class="cstat-no" title="statement not covered">          return outRules.push(rule);</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var importData = parseImport('@import ' + rule.import + ';');</span>
-<span class="cstat-no" title="statement not covered" >        var importPath = importData &amp;&amp; importData[0].path;</span>
-<span class="cstat-no" title="statement not covered" >        if(isUrl(importPath) || !options.inlineImports) {</span>
-<span class="cstat-no" title="statement not covered" >          return urlImportRules.push(rule);</span>
+<span class="cstat-no" title="statement not covered">        var importData = parseImport('@import ' + rule.import + ';');</span>
+<span class="cstat-no" title="statement not covered">        var importPath = importData &amp;&amp; importData[0].path;</span>
+<span class="cstat-no" title="statement not covered">        if(isUrl(importPath) || !options.inlineImports) {</span>
+<span class="cstat-no" title="statement not covered">          return urlImportRules.push(rule);</span>
         }
-<span class="cstat-no" title="statement not covered" >        return outRules.push(rule);</span>
+<span class="cstat-no" title="statement not covered">        return outRules.push(rule);</span>
       });
-<span class="cstat-no" title="statement not covered" >      styles.rules = outRules;</span>
+<span class="cstat-no" title="statement not covered">      styles.rules = outRules;</span>
     }
 &nbsp;
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function processNestedImport(contents) {</span>
-<span class="cstat-no" title="statement not covered" >      var rew = rework(contents,{source:this.source});/</span>/find the css file has syntax errors
-<span class="cstat-no" title="statement not covered" >      if(options.rebaseUrls) {</span>
-<span class="cstat-no" title="statement not covered" >        rew = rew.use(urlPlugin(this.source));</span>
+<span class="fstat-no" title="function not covered">    function processNestedImport(contents) {</span>
+<span class="cstat-no" title="statement not covered">      var rew = rework(contents,{source:this.source});/</span>/find the css file has syntax errors
+<span class="cstat-no" title="statement not covered">      if(options.rebaseUrls) {</span>
+<span class="cstat-no" title="statement not covered">        rew = rew.use(urlPlugin(this.source));</span>
       }
-<span class="cstat-no" title="statement not covered" >      rew = rew.use(collectImportUrls);</span>
-<span class="cstat-no" title="statement not covered" >      return rew.toString();</span>
+<span class="cstat-no" title="statement not covered">      rew = rew.use(collectImportUrls);</span>
+<span class="cstat-no" title="statement not covered">      return rew.toString();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      processedCss = rework(String(file.contents||""),{source:file.path});/</span>/find the css file has syntax errors
-<span class="cstat-no" title="statement not covered" >      if(options.rebaseUrls) {</span>
-<span class="cstat-no" title="statement not covered" >        processedCss = processedCss.use(urlPlugin(file.path));</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      processedCss = rework(String(file.contents||""),{source:file.path});/</span>/find the css file has syntax errors
+<span class="cstat-no" title="statement not covered">      if(options.rebaseUrls) {</span>
+<span class="cstat-no" title="statement not covered">        processedCss = processedCss.use(urlPlugin(file.path));</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      processedCss = processedCss.use(collectImportUrls);</span>
+<span class="cstat-no" title="statement not covered">      processedCss = processedCss.use(collectImportUrls);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if(options.inlineImports) {</span>
-<span class="cstat-no" title="statement not covered" >        processedCss = processedCss.use(reworkImport({</span>
+<span class="cstat-no" title="statement not covered">      if(options.inlineImports) {</span>
+<span class="cstat-no" title="statement not covered">        processedCss = processedCss.use(reworkImport({</span>
           path: [
             '.',
             path.dirname(file.path)
@@ -583,47 +581,48 @@ module.exports = <span class="fstat-no" title="function not covered" >function(d
           .toString();
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      processedCss = processedCss.toString();</span>
+<span class="cstat-no" title="statement not covered">      processedCss = processedCss.toString();</span>
     } catch(err) {
-<span class="cstat-no" title="statement not covered" >      this.emit('error', new gutil.PluginError('gulp-concat-css', err));</span>
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">      this.emit('error', new gutil.PluginError('gulp-concat-css', err));</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    buffer.push(processedCss);</span>
-<span class="cstat-no" title="statement not covered" >    cb();</span>
-  }, <span class="fstat-no" title="function not covered" >function(cb) {</span>
-<span class="cstat-no" title="statement not covered" >    if(!firstFile) {</span>
-<span class="cstat-no" title="statement not covered" >      return cb();</span>
+<span class="cstat-no" title="statement not covered">    buffer.push(processedCss);</span>
+<span class="cstat-no" title="statement not covered">    cb();</span>
+  }, <span class="fstat-no" title="function not covered">function(cb) {</span>
+<span class="cstat-no" title="statement not covered">    if(!firstFile) {</span>
+<span class="cstat-no" title="statement not covered">      return cb();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var contents = urlImportRules.map(<span class="fstat-no" title="function not covered" >function(rule) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return '@import ' + rule.import + ';';</span>
+<span class="cstat-no" title="statement not covered">    var contents = urlImportRules.map(<span class="fstat-no" title="function not covered">function(rule) {</span></span>
+<span class="cstat-no" title="statement not covered">      return '@import ' + rule.import + ';';</span>
     }).concat(buffer).join(gutil.linefeed);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var concatenatedFile = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered">    var concatenatedFile = new gutil.File({</span>
       base: firstFile.base,
       cwd: firstFile.cwd,
       path: path.join(firstFile.base, destFile),
       contents: new Buffer(contents)
     });
-<span class="cstat-no" title="statement not covered" >    this.push(concatenatedFile);</span>
-<span class="cstat-no" title="statement not covered" >    cb();</span>
+<span class="cstat-no" title="statement not covered">    this.push(concatenatedFile);</span>
+<span class="cstat-no" title="statement not covered">    cb();</span>
   });
 };
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isUrl(url) {</span>
-<span class="cstat-no" title="statement not covered" >  return (/^([\w]+:)?\/\/./).test(url);</span>
+<span class="fstat-no" title="function not covered">function isUrl(url) {</span>
+<span class="cstat-no" title="statement not covered">  return (/^([\w]+:)?\/\/./).test(url);</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isDataURI(url) {</span>
-<span class="cstat-no" title="statement not covered" >  return url &amp;&amp; url.indexOf('data:') === 0;</span>
+<span class="fstat-no" title="function not covered">function isDataURI(url) {</span>
+<span class="cstat-no" title="statement not covered">  return url &amp;&amp; url.indexOf('data:') === 0;</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 10:59:32 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:09:19 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
