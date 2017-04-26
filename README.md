@@ -1,6 +1,6 @@
 # npmtest-gulp-concat-css
 
-#### test coverage for  [gulp-concat-css (v2.3.0)](https://github.com/mariocasciaro/gulp-concat-css)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat-css.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat-css) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat-css.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat-css)
+#### basic test coverage for  [gulp-concat-css (v2.3.0)](https://github.com/mariocasciaro/gulp-concat-css)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-concat-css.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-concat-css) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-concat-css.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-concat-css)
 
 #### Concatenate css files, rebasing urls and inlining @import
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-concat-css/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-concat-css/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-concat-css/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-concat-css/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-concat-css/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-concat-css/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-concat-css/build/coverage.html/index.html)
 
@@ -90,7 +90,8 @@
     "scripts": {
         "test": "node_modules/mocha/bin/mocha test/*.js --reporter spec"
     },
-    "version": "2.3.0"
+    "version": "2.3.0",
+    "bin": {}
 }
 ```
 
